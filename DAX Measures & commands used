@@ -1,0 +1,10 @@
+For Creating new measures, select the fields where new measure is to be created-> Select New Measure from Measure tools bar -> write the DAX syntax -> select tick 
+
+// Defect Percentage Measure
+Defect Percentage = DIVIDE(SUM('Quality Data'[Defects]),SUM('Quality Data'[Samples]),BLANK())
+
+//Fatal Error Percentage Measure
+Fatal Error Percentage = DIVIDE(SUM('Quality Data'[Fatel Errors]),SUM('Quality Data'[Samples]),BLANK())
+
+//Sampling Percentage Measure
+Sampling Percentage = DIVIDE(SUM('Quality Data'[Samples]),SUM('Quality Data'[Total Task]),BLANK())
